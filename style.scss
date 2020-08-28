@@ -1,0 +1,890 @@
+
+@import "__common.scss";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Do Hyeon', sans-serif;
+
+}
+
+html{
+    font-size: 62.5%;
+  
+}
+
+
+
+#header{
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.8)), url(headerimg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-attachment: fixed;
+
+    .header-text{
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%,-50%);
+       text-align: center;
+       color: white;
+
+     
+
+       & h2{
+           font-size: 7rem;
+           font-weight: bolder;
+           margin: 2.5rem 0;
+           color: white;
+        
+       }
+
+       & h2::after{
+           content: "#127775";
+       }
+       & h2::before{
+           content: "";
+           width: 100%;
+           display: block;
+           word-spacing: 1rem;
+           margin-bottom: 3rem;
+           text-align: center;
+           font-size: 2.2rem;
+           color: #ED553D;
+           animation: chamatkar 4s infinite linear;
+           animation-direction: alternate-reverse;
+           text-shadow: 0.2rem 0.2rem 0.3rem black;
+          
+       }
+
+       @keyframes chamatkar {
+           0%{
+               content: "WORK";
+               
+           }
+           
+           45%{
+            content: "WORK HARDER,";
+        }
+        
+        75%{
+            content: "WORK HARDER, GET";
+        }
+        
+        100%{
+            content: "WORK HARDER, GET STRONGER";
+        }
+
+       
+       }
+
+       button{
+           @include main-btn;
+           padding: 1.5rem 1.5rem;
+           font-weight: bold;
+           transition: background 0.5s;
+           letter-spacing: 0.3rem;
+
+           &:hover{
+               background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+               
+               border: 0.1rem solid #ED553D;
+           }
+         
+       }
+        
+    }
+}
+
+
+
+.navbar{
+
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.8));
+    z-index: 99;
+    
+
+    .navbar-brand{
+        color: white;
+        font-size: 3rem;
+        font-weight: 900;
+       &:hover{
+           color: #ED553D;
+       }
+        & span{
+            color: #ED553D;
+        }
+
+        
+    }
+
+    .navbar-nav{
+
+        & .nav-item{
+          color: white;
+          margin-right: 1rem;
+          &:last-child{
+              margin-right: 10rem;
+          }
+            & .nav-link{
+                color: white;
+                margin-right: 1rem;
+                margin-left: 1rem;
+                font-size: 1.33rem;
+                text-transform: uppercase;
+                padding: 0;
+                position: relative;
+                 
+                &::after{
+                    content: "";
+                    display: inline-block;
+                    width: 0%;
+                    height: 0.3rem;
+                    background: white;
+                    position: absolute;
+                    top: 100%;
+                    left: 0%;
+                    transition: 0.5s linear;
+                }
+
+                &:hover::after{
+                    width: 100%;
+                }
+
+                &:hover{
+                    color: #ED553D;
+                }
+            }
+        }
+    }
+
+    button{
+        @include main-btn;
+        padding: 1rem 1rem;
+
+    }
+
+    .container{
+        padding: 1.4rem 0;
+    }
+
+}
+
+
+
+
+/*programs section*/
+#programs{
+    padding: 6rem 0;
+
+
+    .col-12{
+    
+       
+
+        & h4{
+            font-size: 2.6rem;
+            font-weight: 900;
+        }
+        & span{
+            color: #ED553D;
+        }
+
+        & p{
+            font-size: 1.45rem;
+          
+        }
+    }
+
+    .specify{
+
+        & h5{
+            font-size: 2.2rem;
+            font-weight: bold;
+        }
+
+        & p{
+            font-size: 1.4rem;
+            font-weight: lighter;
+            color: gray;
+        }
+
+        & a{
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: #ED553D;
+            text-transform: uppercase;
+        }
+
+        & .bg-colour{
+            background: #ED553D;
+            border-radius: 2rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+/*---Join Section---*/
+#join{
+
+background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)), url(joinimg.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+background-attachment: fixed;
+
+& h4{
+    font-size: 3rem;
+    font-weight: 900;
+    color: white;
+    margin-top: 3rem;
+}
+
+& span{
+    color: #ED553D;
+}
+
+& p{
+    font-size: 1.8rem;
+    font-weight: lighter;
+    color: white;
+    margin: 3rem 0;
+}
+
+.main-btn{
+    @include main-btn;
+    margin-bottom: 4rem;
+    padding: 1.1rem 0.5rem;
+    transition: background 0.5s;
+
+    &:hover{
+    background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+       border: 0.1rem solid #ED553D;
+    }
+}
+
+
+
+}
+
+
+
+/*---SChedule Section---*/
+
+#schedule{
+    padding: 6rem 0;
+
+    & h2{
+        font-size: 3.3rem;
+        font-weight: 800;
+    }
+ & span{
+     color: #ED553D;
+ }
+
+
+    .left-sec{
+        height: 8rem;
+        box-shadow: 0.2rem 0.3rem 0.5rem  black;
+        border-radius: 1.3rem;
+        transition: transform 0.5s linear;
+
+        &:hover{
+            transform: scale3d(1.2,1.2,1.9);
+        }
+    }
+
+    & h4{
+        font-size: 2rem;
+        font-weight: 800;
+        color: #ED553D;
+    }
+
+    .right-sec{
+        width: 100%;
+       
+       
+        & img{
+            height: 25rem;
+            width: 100%;
+            border-radius: 1.5rem;
+
+            &:hover{
+                animation: aagepiche 3s infinite linear;
+                animation-direction:alternate ;
+                cursor: pointer;
+                transition: 0.5s;
+            }
+
+            @keyframes aagepiche{
+                0%{
+                   filter: drop-shadow(0.2rem 0.2rem 1rem black);
+                }
+   
+                50%{
+                    filter: drop-shadow(0.2rem 0.2rem 01rem black);
+                }
+                100%{
+                   
+                }
+            }
+        }
+
+      
+    }
+
+    & p{
+        font-size: 1.7rem;
+        color: gray;
+        margin: 2rem 0;
+    }
+
+    & button {
+        @include main-btn;
+        padding: 1rem 0.7rem;
+        transition: background 0.5s;
+
+        &:hover{
+            background:white;
+            border: 0.1rem solid #ED553D;
+            color: #ED553D;
+        }
+    }
+
+
+
+  
+}
+
+
+/*--Routine Section--*/
+#routine{
+    padding: 6rem 0;
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.7)), url(schedulebg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+
+    & h2{
+        font-size: 3rem;
+        font-weight: 800;
+        color: white;
+    }
+
+    & p{
+        color: white;
+        font-size: 1.5rem;
+        margin-top: 1.2rem;
+    }
+
+    & span{
+        color: #ED553D;
+    }
+
+
+    #customers{
+
+        border-collapse: collapse;
+        width: 100%;
+       
+
+       
+
+    }
+    #customers td, #customers th {
+        border: 0.1rem solid #ddd;
+        padding: 4rem;
+
+      }
+
+      #customers th {
+       
+        text-align: center;
+        background-color: #ED553D;
+        color: white;
+        font-size: 2rem;
+      }
+
+      #customers td{
+        color: white;
+        text-align: center;
+        font-size: 1.5rem;
+        
+      }
+}
+
+
+/*---Trainers section---*/
+
+#trainers{
+padding: 7rem 0;
+
+
+& h2{
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+span{
+    color: #ED553D;
+}
+
+& span img {
+   
+    width: 1.9rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    transition: transform 0.5s linear;
+    
+    &:hover{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+& h5{
+    font-size: 2.4rem;
+    margin-top: 1.3rem;
+}
+
+& p{
+    font-size: 1.4rem;
+    color: gray;
+    margin: 1.2rem 0;
+    line-height: 2.3rem;
+}
+
+& .card{
+    padding: 3rem;
+    filter: drop-shadow(0.2rem 0.2rem 0.4rem rgba(0,0,0,0.4));
+
+    & img{
+        border-radius: 1.2rem;
+        
+    }
+}
+
+& small{
+    font-size: 1.3rem;
+    margin: 8rem 0;
+    color: #ED553D;
+}
+
+
+}
+
+
+
+/*---Contact Section---*/
+#contact{
+
+    padding: 5rem 0 0 0;
+
+    & h4{
+        font-size: 4rem;
+    }
+
+& .container-fluid .row{
+    padding: 0;
+
+   
+}
+
+& iframe{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.right{
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(255,255,255,0.4)), url(joinimg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+
+    .form-wrap{
+        background: white;
+        width: 75%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem;
+        margin: 6rem 0;
+        border-radius: 1rem;
+        
+       
+        & form{
+            width: 100%;
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            flex-direction: column;
+
+            .text{
+                height: 15rem;
+            }
+
+            button{
+                @include main-btn;
+                text-align: left;
+                padding: 1rem 1.3rem;
+                transition: background 0.5s;
+
+                &:hover{
+                    background: transparent ;
+                    color: #ED553D;
+                    border: 0.1rem solid #ED553D;
+                }
+            }
+
+            .hai{
+              
+                width: 100%;
+                box-sizing: border-box;
+
+            }
+
+            & textarea{
+                padding: 1.2rem 0.7rem;
+                margin-bottom: 2rem;
+                width: 100%;
+                font-size: 1.6rem;
+                min-height: 15rem;
+                max-height: 20rem;
+                outline: transparent;
+                border: 0.1rem solid #dfe6e9;
+               
+                &:focus{
+                    border: 0.1rem solid #ED553D;
+                }
+            }
+
+            & input{
+                padding: 1.2rem 0.7rem;
+                margin-bottom: 2rem;
+                width: 100%;
+                font-size: 1.6rem;
+                outline: transparent;
+                border: 0.1rem solid #dfe6e9;
+
+                &:focus{
+                   
+                    border: 0.1rem solid #ED553D;
+                    
+                }
+                
+
+            }
+        }
+    }
+}
+
+}
+
+
+/*---Footer Section--*/
+#footer{
+padding: 2.3rem 0;
+background: #ED553D;
+text-align: center;
+font-size: 1.4rem;
+
+& small{
+    font-size: 2rem;
+}
+
+& span{
+    color: white;
+    letter-spacing: .1rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem black;
+}
+
+}
+
+
+/*-----RESPONSIVE SECTION----*/
+
+@media (min-width:0) and (max-width:280px){
+    html{
+        font-size: 30%;
+      
+    }
+
+    #header {
+
+        .container{
+            padding: 0 2rem;
+        }
+
+        .nav-link{
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        button{
+            font-size: 2rem;
+            padding: 1rem 1.6rem;
+        }
+    
+    }
+   
+    #schedule{
+
+    
+        & h2{
+            font-size: 3.3rem;
+
+        }
+   
+    
+        .left-sec{
+            height: auto;
+            display:flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+           
+        }
+    
+        & h4{
+            font-size: 2rem;
+
+            
+        }
+    
+        .right-sec{
+
+            & img{
+                height: 25rem;
+
+            }
+
+        }
+    
+        & p{
+            font-size: 2.2rem;
+  
+        }
+    
+       
+        
+    
+    
+    
+      
+    }
+
+    /*--Routine Section--*/
+#routine{
+
+    & h2{
+        font-size: 4rem;
+  
+    }
+
+    & p{
+
+        font-size: 2.1rem;
+
+    }
+
+    & span{
+        color: #ED553D;
+    }
+
+
+    #customers{
+
+        border-collapse: collapse;
+        width: 100%;
+       
+
+       
+
+    }
+    #customers td, #customers th {
+
+        padding: 1.3rem;
+
+      }
+
+      #customers th {
+
+        font-size: 1.7rem;
+      }
+
+      #customers td{
+
+        font-size: 1.8rem;
+        
+      }
+}
+
+
+
+/*---Trainers section---*/
+
+#trainers{
+    padding: 7rem 0;
+    
+    
+    & h2{
+        font-size: 3.5rem;
+    }
+
+    & h5{
+        font-size: 4rem;
+    }
+    
+    & p{
+        font-size: 2.1rem;
+  
+    }
+    
+   & i img{
+       width: 34rem;
+
+   }
+
+   & small{
+       font-size: 2.33rem;
+   }
+  
+   & .card{
+
+
+    & span img{
+        width: 2.8rem;
+        margin-top: 2.9rem;
+        
+    }
+}
+    
+    
+    }
+    
+
+}
+
+
+@media (min-width:281px) and (max-width:576px){
+
+    html{
+        font-size: 50%;
+      
+    }
+
+    #header {
+
+        .container{
+            padding: 0 2rem;
+        }
+
+        .nav-link{
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        button{
+            font-size: 2rem;
+            padding: 1rem 1.6rem;
+        }
+    
+    }
+
+   
+    #schedule{
+ 
+    
+        & h2{
+            font-size: 3.3rem;
+  
+        }
+ 
+        .left-sec{
+            height: 8rem;
+
+        }
+    
+        & h4{
+            font-size: 2rem;
+
+        }
+    
+        .right-sec{
+            width: 100%;
+           
+           
+            & img{
+                height: 25rem;
+                width: 100%;
+                border-radius: 1.5rem;
+            }
+  
+        }
+    
+        & p{
+            font-size: 1.6rem;
+  
+        }
+
+    }
+
+
+
+    #routine{
+
+    
+        & h2{
+  font-size: 2.9rem;
+        }
+    
+        & p{
+          
+            font-size: 1.9rem;
+   
+        }
+
+    
+    
+        #customers{
+
+        }
+        #customers td, #customers th {
+            border: 0.1rem solid #ddd;
+            padding: 1.2rem;
+    
+          }
+    
+          #customers th {
+
+            font-size: 1.6rem;
+          }
+    
+          #customers td{
+ 
+            font-size: 1.5rem;
+            
+          }
+    }
+
+
+    
+/*---Trainers section---*/
+
+
+
+}

@@ -1,0 +1,745 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Do Hyeon', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+#header {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.8))), url(headerimg.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(headerimg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-attachment: fixed;
+}
+
+#header .header-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+#header .header-text h2 {
+  font-size: 7rem;
+  font-weight: bolder;
+  margin: 2.5rem 0;
+  color: white;
+}
+
+#header .header-text h2::after {
+  content: "#127775";
+}
+
+#header .header-text h2::before {
+  content: "";
+  width: 100%;
+  display: block;
+  word-spacing: 1rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-size: 2.2rem;
+  color: #ED553D;
+  -webkit-animation: chamatkar 4s infinite linear;
+          animation: chamatkar 4s infinite linear;
+  animation-direction: alternate-reverse;
+  text-shadow: 0.2rem 0.2rem 0.3rem black;
+}
+
+@-webkit-keyframes chamatkar {
+  0% {
+    content: "WORK";
+  }
+  45% {
+    content: "WORK HARDER,";
+  }
+  75% {
+    content: "WORK HARDER, GET";
+  }
+  100% {
+    content: "WORK HARDER, GET STRONGER";
+  }
+}
+
+@keyframes chamatkar {
+  0% {
+    content: "WORK";
+  }
+  45% {
+    content: "WORK HARDER,";
+  }
+  75% {
+    content: "WORK HARDER, GET";
+  }
+  100% {
+    content: "WORK HARDER, GET STRONGER";
+  }
+}
+
+#header .header-text button {
+  background: #ED553D;
+  color: white;
+  font-size: 1.4rem;
+  padding: 1.5rem 1.5rem;
+  font-weight: bold;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
+  letter-spacing: 0.3rem;
+}
+
+#header .header-text button:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4)));
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  border: 0.1rem solid #ED553D;
+}
+
+.navbar {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.8)));
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
+  z-index: 99;
+}
+
+.navbar .navbar-brand {
+  color: white;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.navbar .navbar-brand:hover {
+  color: #ED553D;
+}
+
+.navbar .navbar-brand span {
+  color: #ED553D;
+}
+
+.navbar .navbar-nav .nav-item {
+  color: white;
+  margin-right: 1rem;
+}
+
+.navbar .navbar-nav .nav-item:last-child {
+  margin-right: 10rem;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+  color: white;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  font-size: 1.33rem;
+  text-transform: uppercase;
+  padding: 0;
+  position: relative;
+}
+
+.navbar .navbar-nav .nav-item .nav-link::after {
+  content: "";
+  display: inline-block;
+  width: 0%;
+  height: 0.3rem;
+  background: white;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover {
+  color: #ED553D;
+}
+
+.navbar button {
+  background: #ED553D;
+  color: white;
+  font-size: 1.4rem;
+  padding: 1rem 1rem;
+}
+
+.navbar .container {
+  padding: 1.4rem 0;
+}
+
+/*programs section*/
+#programs {
+  padding: 6rem 0;
+}
+
+#programs .col-12 h4 {
+  font-size: 2.6rem;
+  font-weight: 900;
+}
+
+#programs .col-12 span {
+  color: #ED553D;
+}
+
+#programs .col-12 p {
+  font-size: 1.45rem;
+}
+
+#programs .specify h5 {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+#programs .specify p {
+  font-size: 1.4rem;
+  font-weight: lighter;
+  color: gray;
+}
+
+#programs .specify a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #ED553D;
+  text-transform: uppercase;
+}
+
+#programs .specify .bg-colour {
+  background: #ED553D;
+  border-radius: 2rem;
+}
+
+/*---Join Section---*/
+#join {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.7))), url(joinimg.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(joinimg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#join h4 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: white;
+  margin-top: 3rem;
+}
+
+#join span {
+  color: #ED553D;
+}
+
+#join p {
+  font-size: 1.8rem;
+  font-weight: lighter;
+  color: white;
+  margin: 3rem 0;
+}
+
+#join .main-btn {
+  background: #ED553D;
+  color: white;
+  font-size: 1.4rem;
+  margin-bottom: 4rem;
+  padding: 1.1rem 0.5rem;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
+}
+
+#join .main-btn:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4)));
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  border: 0.1rem solid #ED553D;
+}
+
+/*---SChedule Section---*/
+#schedule {
+  padding: 6rem 0;
+}
+
+#schedule h2 {
+  font-size: 3.3rem;
+  font-weight: 800;
+}
+
+#schedule span {
+  color: #ED553D;
+}
+
+#schedule .left-sec {
+  height: 8rem;
+  -webkit-box-shadow: 0.2rem 0.3rem 0.5rem  black;
+          box-shadow: 0.2rem 0.3rem 0.5rem  black;
+  border-radius: 1.3rem;
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+}
+
+#schedule .left-sec:hover {
+  -webkit-transform: scale3d(1.2, 1.2, 1.9);
+          transform: scale3d(1.2, 1.2, 1.9);
+}
+
+#schedule h4 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ED553D;
+}
+
+#schedule .right-sec {
+  width: 100%;
+}
+
+#schedule .right-sec img {
+  height: 25rem;
+  width: 100%;
+  border-radius: 1.5rem;
+}
+
+#schedule .right-sec img:hover {
+  -webkit-animation: aagepiche 3s infinite linear;
+          animation: aagepiche 3s infinite linear;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@-webkit-keyframes aagepiche {
+  0% {
+    -webkit-filter: drop-shadow(0.2rem 0.2rem 1rem black);
+            filter: drop-shadow(0.2rem 0.2rem 1rem black);
+  }
+  50% {
+    -webkit-filter: drop-shadow(0.2rem 0.2rem 1rem black);
+            filter: drop-shadow(0.2rem 0.2rem 1rem black);
+  }
+  100% {
+  }
+}
+
+@keyframes aagepiche {
+  0% {
+    -webkit-filter: drop-shadow(0.2rem 0.2rem 1rem black);
+            filter: drop-shadow(0.2rem 0.2rem 1rem black);
+  }
+  50% {
+    -webkit-filter: drop-shadow(0.2rem 0.2rem 1rem black);
+            filter: drop-shadow(0.2rem 0.2rem 1rem black);
+  }
+  100% {
+  }
+}
+
+#schedule p {
+  font-size: 1.7rem;
+  color: gray;
+  margin: 2rem 0;
+}
+
+#schedule button {
+  background: #ED553D;
+  color: white;
+  font-size: 1.4rem;
+  padding: 1rem 0.7rem;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
+}
+
+#schedule button:hover {
+  background: white;
+  border: 0.1rem solid #ED553D;
+  color: #ED553D;
+}
+
+/*--Routine Section--*/
+#routine {
+  padding: 6rem 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.7))), url(schedulebg.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(schedulebg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#routine h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: white;
+}
+
+#routine p {
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 1.2rem;
+}
+
+#routine span {
+  color: #ED553D;
+}
+
+#routine #customers {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#routine #customers td, #routine #customers th {
+  border: 0.1rem solid #ddd;
+  padding: 4rem;
+}
+
+#routine #customers th {
+  text-align: center;
+  background-color: #ED553D;
+  color: white;
+  font-size: 2rem;
+}
+
+#routine #customers td {
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/*---Trainers section---*/
+#trainers {
+  padding: 7rem 0;
+}
+
+#trainers h2 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+#trainers span {
+  color: #ED553D;
+}
+
+#trainers span img {
+  width: 1.9rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+}
+
+#trainers span img:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+#trainers h5 {
+  font-size: 2.4rem;
+  margin-top: 1.3rem;
+}
+
+#trainers p {
+  font-size: 1.4rem;
+  color: gray;
+  margin: 1.2rem 0;
+  line-height: 2.3rem;
+}
+
+#trainers .card {
+  padding: 3rem;
+  -webkit-filter: drop-shadow(0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.4));
+          filter: drop-shadow(0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.4));
+}
+
+#trainers .card img {
+  border-radius: 1.2rem;
+}
+
+#trainers small {
+  font-size: 1.3rem;
+  margin: 8rem 0;
+  color: #ED553D;
+}
+
+/*---Contact Section---*/
+#contact {
+  padding: 5rem 0 0 0;
+}
+
+#contact h4 {
+  font-size: 4rem;
+}
+
+#contact .container-fluid .row {
+  padding: 0;
+}
+
+#contact iframe {
+  width: 100%;
+  height: 100%;
+}
+
+#contact .right {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(255, 255, 255, 0.4))), url(joinimg.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.4)), url(joinimg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#contact .right .form-wrap {
+  background: white;
+  width: 75%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3rem;
+  margin: 6rem 0;
+  border-radius: 1rem;
+}
+
+#contact .right .form-wrap form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#contact .right .form-wrap form .text {
+  height: 15rem;
+}
+
+#contact .right .form-wrap form button {
+  background: #ED553D;
+  color: white;
+  font-size: 1.4rem;
+  text-align: left;
+  padding: 1rem 1.3rem;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
+}
+
+#contact .right .form-wrap form button:hover {
+  background: transparent;
+  color: #ED553D;
+  border: 0.1rem solid #ED553D;
+}
+
+#contact .right .form-wrap form .hai {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#contact .right .form-wrap form textarea {
+  padding: 1.2rem 0.7rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  font-size: 1.6rem;
+  min-height: 15rem;
+  max-height: 20rem;
+  outline: transparent;
+  border: 0.1rem solid #dfe6e9;
+}
+
+#contact .right .form-wrap form textarea:focus {
+  border: 0.1rem solid #ED553D;
+}
+
+#contact .right .form-wrap form input {
+  padding: 1.2rem 0.7rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  font-size: 1.6rem;
+  outline: transparent;
+  border: 0.1rem solid #dfe6e9;
+}
+
+#contact .right .form-wrap form input:focus {
+  border: 0.1rem solid #ED553D;
+}
+
+/*---Footer Section--*/
+#footer {
+  padding: 2.3rem 0;
+  background: #ED553D;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+#footer small {
+  font-size: 2rem;
+}
+
+#footer span {
+  color: white;
+  letter-spacing: .1rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem black;
+}
+
+/*-----RESPONSIVE SECTION----*/
+@media (min-width: 0) and (max-width: 280px) {
+  html {
+    font-size: 30%;
+  }
+  #header .container {
+    padding: 0 2rem;
+  }
+  #header .nav-link {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  #header button {
+    font-size: 2rem;
+    padding: 1rem 1.6rem;
+  }
+  #schedule h2 {
+    font-size: 3.3rem;
+  }
+  #schedule .left-sec {
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #schedule h4 {
+    font-size: 2rem;
+  }
+  #schedule .right-sec img {
+    height: 25rem;
+  }
+  #schedule p {
+    font-size: 2.2rem;
+  }
+  /*--Routine Section--*/
+  #routine h2 {
+    font-size: 4rem;
+  }
+  #routine p {
+    font-size: 2.1rem;
+  }
+  #routine span {
+    color: #ED553D;
+  }
+  #routine #customers {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  #routine #customers td, #routine #customers th {
+    padding: 1.3rem;
+  }
+  #routine #customers th {
+    font-size: 1.7rem;
+  }
+  #routine #customers td {
+    font-size: 1.8rem;
+  }
+  /*---Trainers section---*/
+  #trainers {
+    padding: 7rem 0;
+  }
+  #trainers h2 {
+    font-size: 3.5rem;
+  }
+  #trainers h5 {
+    font-size: 4rem;
+  }
+  #trainers p {
+    font-size: 2.1rem;
+  }
+  #trainers i img {
+    width: 34rem;
+  }
+  #trainers small {
+    font-size: 2.33rem;
+  }
+  #trainers .card span img {
+    width: 2.8rem;
+    margin-top: 2.9rem;
+  }
+}
+
+@media (min-width: 281px) and (max-width: 576px) {
+  html {
+    font-size: 50%;
+  }
+  #header .container {
+    padding: 0 2rem;
+  }
+  #header .nav-link {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  #header button {
+    font-size: 2rem;
+    padding: 1rem 1.6rem;
+  }
+  #schedule h2 {
+    font-size: 3.3rem;
+  }
+  #schedule .left-sec {
+    height: 8rem;
+  }
+  #schedule h4 {
+    font-size: 2rem;
+  }
+  #schedule .right-sec {
+    width: 100%;
+  }
+  #schedule .right-sec img {
+    height: 25rem;
+    width: 100%;
+    border-radius: 1.5rem;
+  }
+  #schedule p {
+    font-size: 1.6rem;
+  }
+  #routine h2 {
+    font-size: 2.9rem;
+  }
+  #routine p {
+    font-size: 1.9rem;
+  }
+  #routine #customers td, #routine #customers th {
+    border: 0.1rem solid #ddd;
+    padding: 1.2rem;
+  }
+  #routine #customers th {
+    font-size: 1.6rem;
+  }
+  #routine #customers td {
+    font-size: 1.5rem;
+  }
+  /*---Trainers section---*/
+}
+/*# sourceMappingURL=style.css.map */
