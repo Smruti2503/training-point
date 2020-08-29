@@ -45,6 +45,7 @@ html{
         
        }
 
+
        & h2::before{
            content: "";
            width: 100%;
@@ -857,9 +858,6 @@ font-size: 1.4rem;
 
     
     
-        #customers{
-
-        }
         #customers td, #customers th {
             border: 0.1rem solid #ddd;
             padding: 1.2rem;
@@ -882,6 +880,200 @@ font-size: 1.4rem;
     
 /*---Trainers section---*/
 
+
+
+}
+
+
+@media only screen and (max-height:280px){
+
+   
+    #header{
+ 
+        width: 100%;
+        height: 125vh;
+ 
+    
+        .header-text{
+           
+    
+         
+    
+           & h2{
+               font-size: 2.3rem;
+
+            
+           }
+    
+    
+           & h2::before{
+
+               font-size: 2rem;
+
+              
+           }
+    
+
+    
+           button{
+  
+               padding: 1.2rem 1.1rem;
+
+    
+
+             
+           }
+            
+        }
+    }
+
+
+    .navbar{
+
+        background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.8));
+        z-index: 99;
+        
+    
+        .navbar-brand{
+            color: white;
+            font-size: 3rem;
+            font-weight: 900;
+           &:hover{
+               color: #ED553D;
+           }
+            & span{
+                color: #ED553D;
+            }
+    
+            
+        }
+    
+
+
+
+
+
+
+        .navbar-nav{
+    
+            & .nav-item{
+              color: white;
+              margin-right: 1rem;
+              &:last-child{
+                  margin-right: 10rem;
+              }
+                & .nav-link{
+                    color: white;
+                    margin-right: 1rem;
+                    margin-left: 1rem;
+                    font-size: 1.33rem;
+                    text-transform: uppercase;
+                    padding: 0;
+                    position: relative;
+                     
+                    &::after{
+                        content: "";
+                        display: inline-block;
+                        width: 0%;
+                        height: 0.3rem;
+                        background: white;
+                        position: absolute;
+                        top: 100%;
+                        left: 0%;
+                        transition: 0.5s linear;
+                    }
+    
+                    &:hover::after{
+                        width: 100%;
+                    }
+    
+                    &:hover{
+                        color: #ED553D;
+                    }
+                }
+            }
+        }
+    
+        button{
+            @include main-btn;
+            padding: 1rem 1rem;
+    
+        }
+    
+        .container{
+            padding: 1rem 0;
+        }
+    
+    }
+    
+}
+
+
+
+
+
+@media (min-width:577px) and (max-width:768px){
+
+
+    #header{
+        background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.8)), url(headerimg.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        background-attachment: fixed;
+    
+        .header-text{
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%,-50%);
+           text-align: center;
+           color: white;
+    
+         
+    
+           & h2{
+               font-size: 4.5rem;
+               font-weight: bolder;
+               margin: 2.5rem 0;
+               color: white;
+            
+           }
+    
+    
+           & h2::before{
+               content: "";
+               width: 100%;
+               display: block;
+               word-spacing: 1rem;
+               margin-bottom: 3rem;
+               text-align: center;
+               font-size: 2.2rem;
+               color: #ED553D;
+               animation: chamatkar 4s infinite linear;
+               animation-direction: alternate-reverse;
+               text-shadow: 0.2rem 0.2rem 0.3rem black;
+              
+           }
+    
+    
+           button{
+               @include main-btn;
+               padding: 1.5rem 1.5rem;
+               font-weight: bold;
+               transition: background 0.5s;
+               letter-spacing: 0.3rem;
+    
+
+             
+           }
+            
+        }
+    }
+    
 
 
 }
