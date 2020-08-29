@@ -39,9 +39,6 @@ html {
   color: white;
 }
 
-#header .header-text h2::after {
-  content: "#127775";
-}
 
 #header .header-text h2::before {
   content: "";
